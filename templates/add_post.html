@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>add_post</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Welcome {{ now_user.email }}</h1>
+    <form action="add_post" method="POST" accept-charset="utf-8">
+        <label>Enter Post Here</label>
+        <input type="text" name="pcontent" id="pcontent">
+        <input type="hidden" name="pemail" id="pemail" value="{{ now_user.email }}">
+        <input type="submit">
+    </form>
+</body>
+
+</html>

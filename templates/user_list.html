@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>user_list</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    {% block body %} {% for singleuser in userD %}
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" alt="Card image cap" src="{{ singleuser.profile_pic }}">
+            <div class="card-body">
+                <h4 class="card-title">
+					{{ singleuser.username }}
+				</h4>
+                <p class="card-text">{{ singleuser.location }}</p>
+                <button type="button" class="btn btn-success">View Profile</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %} {% endblock %}
+</body>
+
+</html>
